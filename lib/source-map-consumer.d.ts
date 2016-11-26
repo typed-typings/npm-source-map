@@ -4,9 +4,9 @@ export interface StartOfSourceMap {
 }
 
 export interface RawSourceMap extends StartOfSourceMap {
-  version: string;
-  sources: Array<string>;
-  names: Array<string>;
+  version: number;
+  sources: string[];
+  names: string[];
   sourcesContent?: string[];
   mappings: string;
 }
@@ -31,12 +31,17 @@ export interface MappingItem {
 }
 
 export class SourceMapConsumer {
-  public static GENERATED_ORDER: number;
-  public static ORIGINAL_ORDER: number;
+  static GENERATED_ORDER: number;
+  static ORIGINAL_ORDER: number;
+
+  sourceRoot: string;
+  sourcesContent: string[];
+  file: string;
+  readonly sources: string[];
 
   constructor(rawSourceMap: RawSourceMap);
-  public originalPositionFor(generatedPosition: Position): MappedPosition;
-  public generatedPositionFor(originalPosition: MappedPosition): Position;
-  public sourceContentFor(source: string): string;
-  public eachMapping(callback: (mapping: MappingItem) => void, context?: any, order?: number): void;
+  originalPositionFor(generatedPosition: Position): MappedPosition;
+  generatedPositionFor(originalPosition: MappedPosition): Position;
+  sourceContentFor(source: string): string;
+  eachMapping(callback: (mapping: MappingItem) => void, context?: any, order?: number): void;
 }

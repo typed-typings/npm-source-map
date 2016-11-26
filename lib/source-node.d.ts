@@ -1,5 +1,5 @@
-import { SourceMapConsumer, MappedPosition, StartOfSourceMap } from './source-map-consumer'
-import { SourceMapGenerator } from './source-map-generator'
+import { SourceMapConsumer, MappedPosition, StartOfSourceMap } from './source-map-consumer';
+import { SourceMapGenerator } from './source-map-generator';
 
 export interface CodeWithSourceMap {
   code: string;

@@ -1,4 +1,4 @@
-import { StartOfSourceMap, SourceMapConsumer } from './source-map-consumer'
+import { StartOfSourceMap, SourceMapConsumer, Position } from './source-map-consumer'
 
 export interface Mapping {
   generated: Position;

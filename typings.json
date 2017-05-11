@@ -3,6 +3,6 @@
   "main": "source-map.d.ts",
   "version": "0.5.0",
   "globalDevDependencies": {
-    "node": "registry:env/node#6.0.0+20161105011511"
+    "node": "registry:env/node#6.0.0+20170213133316"
   }
 }

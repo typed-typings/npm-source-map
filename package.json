@@ -27,7 +27,7 @@
   "homepage": "https://github.com/types/npm-source-map#readme",
   "devDependencies": {
     "greenkeeper-postpublish": "^1.0.1",
-    "source-map": "^0.5.6",
+    "source-map": "^0.6.0",
     "ts-node": "^3.0.3",
     "tslint": "^5.2.0",
     "tslint-config-typings": "^0.3.1",
